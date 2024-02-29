@@ -24,6 +24,8 @@ head(activity)
 # Set the CRAN mirror
 options(repos = "https://cloud.r-project.org/")
 ## install.packages("dplyr")
+## install.packages("ggplot2)
+knitr::opts_chunk$set(echo = TRUE)
 library(dplyr)
 library(ggplot2)
 ```
