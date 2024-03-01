@@ -42,7 +42,7 @@ total_steps
 
 **2. Make a histogram of the total number of steps taken each day.**
 
-```{r histogram of total number of steps each day}
+```{r}
 
 hist(total_steps$`sum(steps, na.rm = T)`,xlab = "Total Steps Per Day",main = "Histogram of total number of steps\ntaken each day")
 
@@ -70,7 +70,7 @@ head(interval_avg)
 ```
 
 
-``` {r Plotting Time-Series of 5-minute interval and average number of steps taken }
+``` {r}
 plot(interval_avg$intervals,interval_avg$average, type = "l",main = "Time-Series Plot of \n5-minute interval and average number of steps taken",xlab = "5-Minute Intervals",ylab = "Average Number of Steps")
 ```
 
@@ -125,7 +125,7 @@ head(activity2)
 
 **4.Make a histogram of the total number of steps taken each day**
 
-```{r histogram after imputing Nas}
+```{r}
 activity2$date = as.Date(activity2$date,format = "%Y-%m-%d")
 total_steps_new = activity2 %>% group_by(date) %>% summarise(sum(steps))
 hist(total_steps_new$`sum(steps)`,xlab = "Total Steps Per Day",main = "Histogram of total number of steps\ntaken each day")
@@ -160,7 +160,7 @@ head(activity2)
 
 **2.Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.**
 
-``` {r Plotting Time Series plot}
+``` {r}
 ## Creating a new data frame which contains the interval and their averages
 
 interval_avg_new = activity2 %>% group_by(interval,weekday_end) %>% summarise(mean(steps)) %>% as.data.frame() %>% rename(average_steps = 'mean(steps)')

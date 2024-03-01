@@ -108,7 +108,7 @@ total_steps
 hist(total_steps$`sum(steps, na.rm = T)`,xlab = "Total Steps Per Day",main = "Histogram of total number of steps\ntaken each day")
 ```
 
-![plot of chunk histogram of total number of steps each day](figure/histogram of total number of steps each day-1.png)
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png)
 
 **3.Calculate and report the mean and median of the total number of steps taken per day.**
 
@@ -160,7 +160,7 @@ head(interval_avg)
 plot(interval_avg$intervals,interval_avg$average, type = "l",main = "Time-Series Plot of \n5-minute interval and average number of steps taken",xlab = "5-Minute Intervals",ylab = "Average Number of Steps")
 ```
 
-![plot of chunk Plotting Time-Series of 5-minute interval and average number of steps taken](figure/Plotting Time-Series of 5-minute interval and average number of steps taken-1.png)
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png)
 
 **2.Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?**
 
@@ -260,7 +260,7 @@ total_steps_new = activity2 %>% group_by(date) %>% summarise(sum(steps))
 hist(total_steps_new$`sum(steps)`,xlab = "Total Steps Per Day",main = "Histogram of total number of steps\ntaken each day")
 ```
 
-![plot of chunk histogram after imputing Nas](figure/histogram after imputing Nas-1.png)
+![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png)
 
 **4. and Calculate and report the mean and median total number of steps taken per day.**  
 
@@ -331,7 +331,7 @@ gg = ggplot(interval_avg_new,aes(interval,average_steps,col = weekday_end))
 gg+geom_line() + facet_grid(weekday_end~.) + ggtitle(label = "Time-Series Plot of the 5-minute interval and the average number of steps taken \nacross all weekday days or weekend days") + xlab("5-Minute Intervals") + ylab("Average Steps Taken")
 ```
 
-![plot of chunk Plotting Time Series plot](figure/Plotting Time Series plot-1.png)
+![plot of chunk unnamed-chunk-6](figure/unnamed-chunk-6-1.png)
             
 
 
